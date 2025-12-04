@@ -13,7 +13,8 @@
           name="user-name"
           id="user-name"
           placeholder="Іван"
-          pattern="^(?=.{5,64}$)[A-Za-zА-Яа-яІіЇїЄєҐґ'-]{2,}( [A-Za-zА-Яа-яІіЇїЄєҐґ'-]{2,})*$"
+          minlength="5"
+          maxlength="64"
           required
         />
         <p class="text-invalid">Error text</p>
@@ -35,8 +36,8 @@
         <label class="support-input-label" for="message">Повідомлення</label>
         <textarea
           class="support-message"
-          name="massage"
-          id="massage"
+          name="message"
+          id="message"
           placeholder="Введіть своє повідомлення..."
           maxlength="500"
         ></textarea>

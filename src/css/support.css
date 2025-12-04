@@ -137,6 +137,13 @@
   color: #030a06;
 }
 
+@media screen and (min-width: 768px) {
+  .support-input,
+  .support-message {
+    max-width: 704px;
+  }
+}
+
 .support-btn {
   display: block;
   border: 1px solid #030a06;
@@ -162,6 +169,12 @@
   opacity: 0.6;
 }
 
+@media screen and (min-width: 768px) {
+  .support-btn {
+    max-width: 249px;
+  }
+}
+
 .support-image {
   background-image: url(/img/support.jpg);
   background-repeat: no-repeat;
@@ -172,6 +185,12 @@
   height: 428px;
 }
 
+@media screen and (min-width: 768px) {
+  .support-image {
+    max-width: 249px;
+    height: 50px;
+  }
+}
 @media (min-resolution: 2x) {
   .support-image {
     background-image: url(/img/support@2x.jpg);
