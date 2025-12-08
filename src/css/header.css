@@ -86,7 +86,7 @@ address a {
     height: 36px;
   }
   .burger-btn {
-    margin-right: 16px;
+    margin-right: 0;
   }
   .contact-link {
     color: #030a06;
@@ -103,7 +103,7 @@ address a {
   }
 
   .burger-btn {
-    margin-right: 28px;
+    margin-right: 0;
   }
 }
 /* ========== DESKTOP ========== */
