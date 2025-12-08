@@ -13,7 +13,7 @@
   padding: 0 20px;
   display: flex;
   flex-direction: column;
-  gap: 48px;                   /* відстань між content та credits */
+  gap: 40px;                   /* відстань між content та credits */
 }
 
 /* ===== CONTENT (лого + меню + соцмережі) – mobile ===== */
@@ -180,7 +180,7 @@
   .footer__inner {
     max-width: 1158px;
     padding: 0 64px;
-    gap: 52px;
+    gap: 32px;
   }
 
   /* CONTENT: лого зліва, меню по центру, соцмережі справа */
@@ -206,6 +206,9 @@
   }
 
   .footer__credits {
+    padding-top: 0;         
+    padding-bottom: 16px;   
+    gap: 12px;   
     align-items: center;
     text-align: center;
   }
