@@ -1,3 +1,34 @@
+ul,
+ol {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+}
+
+/* СЕКЦІЯ */
+.feedbacks-section {
+    max-width: 320px;
+    padding: 32px 16px;
+    margin: 0 auto;
+    background-color: #EBF8ED;
+}
+
+/* КОНТЕЙНЕР */
+.feedbacks-container {
+    max-width: 288px;
+    margin: 0 auto;
+}
+
 /* ЗАГОЛОВОК */
 .feedbacks-name-block {
     font-weight: 700;
@@ -5,12 +36,13 @@
     line-height: 1.2;
     letter-spacing: 0.01em;
     text-align: center;
+    color: #030A06;
+    font-family: "Montserrat", sans-serif;
     margin-bottom: 32px;
 }
 
 /* СПИСОК КАРТОК */
 .feedbacks-client-list {
-    display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 40px;
@@ -32,7 +64,9 @@
 .feedbacks-star-list {
     display: flex;
     gap: 4px;
-    margin-bottom: 12px;
+    list-style: none;
+    padding: 0;
+    margin: 0 0 12px 0;
 }
 
 .star-icon {
@@ -51,6 +85,7 @@
     font-size: 20px;
     line-height: 1.4;
     letter-spacing: 0.01em;
+    color: #030A06;
     margin: 0 0 12px 0;
     flex-grow: 1;
 }
@@ -59,14 +94,27 @@
 .feedbacks-author {
     font-weight: 600;
     font-size: 16px;
-    line-height: 1.6;
+    line-height: 160%;
+    color: #030A06;
     margin: 0;
 }
 
 @media screen and (min-width: 768px) {
-      /* СПИСОК КАРТОК */
+
+    /* СЕКЦІЯ */
+    .feedbacks-section {
+        max-width: 768px;
+        padding: 64px 32px;
+    }
+
+    /* КОНТЕЙНЕР */
+    .feedbacks-container {
+        max-width: 704px;
+    }
+
+    /* СПИСОК КАРТОК */
     .feedbacks-client-list {
-        display: flex; 
+        display: flex;
         flex-wrap: wrap;
         justify-content: center;
         gap: 32px 24px;
@@ -78,8 +126,8 @@
     }
 
     /* ЗІРКИ */
-    .feedbacks-star-list { 
-        margin-bottom: 24px;
+    .feedbacks-star-list {
+        margin: 0 0 24px 0;
     }
 
     /* КАРТКА ВСЕРЕДИНІ */
@@ -89,12 +137,24 @@
 
     /* ТЕКСТ ВІДГУКУ */
     .feedbacks-text {
-        margin-bottom: 24px;
+        margin: 0 0 24px 0;
     }
 }
 
 @media screen and (min-width: 1440px) {
-     /* ЗАГОЛОВОК */
+
+    /* СЕКЦІЯ */
+    .feedbacks-section {
+        max-width: 1440px;
+        padding: 64px;
+    }
+
+    /* КОНТЕЙНЕР */
+    .feedbacks-container {
+        max-width: 1312px;
+    }
+
+    /* ЗАГОЛОВОК */
     .feedbacks-name-block {
         font-size: 48px;
         margin-bottom: 80px;
@@ -108,5 +168,15 @@
     /* ОДИН КЛІЄНТ (li) */
     .feedbacks-item {
         width: calc((100% - 72px) / 4);
+    }
+
+    /* ЗІРКИ */
+    .feedbacks-star-list {
+        margin: 0 0 24px 0;
+    }
+
+    /* ТЕКСТ ВІДГУКУ */
+    .feedbacks-text {
+        margin: 0 0 24px 0;
     }
 }
