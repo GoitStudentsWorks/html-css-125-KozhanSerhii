@@ -3,7 +3,8 @@
 .footer {
   width: 100%;
   background-color: #75D281;
-  padding: 32px 0 40px;
+  /* верхній та нижній падінг  48px */
+  padding: 48px 0;
 }
 
 .footer__inner {
@@ -12,7 +13,8 @@
   padding: 0 20px;
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  /* проміжок між CONTENT і CREDITS = 48px */
+  gap: 48px;
 }
 
 /* ===== CONTENT (logo + menu + socials) – mobile ===== */
@@ -24,15 +26,16 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  gap: 32px;
+  /* проміжки між лого / навігацією / соцмережами = 48px */
+  gap: 48px;
 }
 
-/* LOGO – mobile: frame 280 × 121, gap 24 */
+/* LOGO – mobile: 280 × 121 */
 .footer-logo__img {
   display: block;
   width: 280px;
+  height: 121px;
   max-width: 100%;
-  height: auto;
   margin: 0 auto;
 }
 
@@ -48,13 +51,18 @@
 .footer-nav__list {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  /* проміжок між пунктами навігації = 32px */
+  gap: 32px;
 }
 
+/* властивості посилань навігації під макет */
 .footer-nav__link {
   text-decoration: none;
   font-weight: 500;
-  color: inherit;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #111827;
 }
 
 .footer-nav__link:hover,
@@ -68,7 +76,8 @@
 .footer-socials {
   display: flex;
   justify-content: center;
-  gap: 16px;
+  /* проміжок між соцмережами = 12px */
+  gap: 12px;
 }
 
 .footer-socials__link {
@@ -88,12 +97,14 @@
 
 .footer__credits {
   width: 100%;
-  padding: 8px 0 0;
+  /* від соцмереж до лінії — керується gap у .footer__inner (48px) */
+  padding: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  gap: 12px;
+  /* між лінією, контактами і копірайтом = 24px */
+  gap: 24px;
 }
 
 /* line */
@@ -107,13 +118,17 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 8px;
-  font-size: 14px;
+  /* між контактами (телефон / email) = 16px */
+  gap: 16px;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
 }
 
+/* властивості контактів під макет */
 .footer-contacts__link {
   text-decoration: none;
-  color: inherit;
+  color: #111827;
 }
 
 .footer-contacts__link:hover,
@@ -121,6 +136,7 @@
   opacity: 0.8;
 }
 
+/* копірайт */
 .footer-copy {
   font-size: 14px;
   margin: 0;
@@ -130,12 +146,14 @@
 
 @media screen and (min-width: 768px) {
   .footer {
-    padding: 56px 0 64px;
+    /* верхній/нижній падінг для планшету = 64px */
+    padding: 64px 0;
   }
 
   .footer__inner {
     max-width: 768px;
     padding: 0 32px;
+    /* між CONTENT і CREDITS в макеті ~24px  */
     gap: 24px;
   }
 
@@ -144,7 +162,8 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    gap: 24px;
+    /* проміжки між лого / навігацією / соцмережами = 32px */
+    gap: 32px;
   }
 
   /* logo tablet: ~164 × 70 */
@@ -157,11 +176,13 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 24px;
+    /* проміжки між пунктами навігації = 32px */
+    gap: 32px;
   }
 
   .footer-socials {
     justify-content: center;
+    /* (в макеті та ж відстань, що й на десктопі) */
     gap: 24px;
   }
 
@@ -172,8 +193,9 @@
   }
 
   .footer__credits {
-    padding-top: 8px;
-    gap: 12px;
+    /* проміжок між лінією і контактами = 16px,
+       між контактами і копірайтом теж 16px */
+    gap: 16px;
   }
 
   .footer-contacts {
@@ -183,7 +205,7 @@
   }
 }
 
-/* ========= DESKTOP ≥1440px (останній скрін) ========= */
+/* ========= DESKTOP ≥1440px  ========= */
 
 @media screen and (min-width: 1440px) {
   .footer {
@@ -193,10 +215,9 @@
   .footer__inner {
     max-width: 1440px;
     padding: 0 64px;
-    gap: 16px;           
+    gap: 16px;
   }
 
-  /* CONTENT: logo left, nav center, socials right */
   .footer__content {
     flex-direction: row;
     align-items: center;
@@ -206,17 +227,16 @@
 
   .footer-logo {
     flex-shrink: 0;
-    margin-right: 64px;   
+    margin-right: 64px;
   }
 
-  /* desktop: ~164×70 з Figma */
   .footer-logo__img {
     width: 164px;
     height: 70px;
   }
 
   .footer-nav {
-    flex: 1;              /* меню в центрі */
+    flex: 1;
   }
 
   .footer-nav__list {
@@ -226,11 +246,10 @@
   }
 
   .footer-socials {
-    justify-content: flex-end;
+    justify-content: اِflex-end;
     gap: 24px;
   }
 
-  /* desktop: 24×24 */
   .footer-socials__icon {
     width: 24px;
     height: 24px;
@@ -248,6 +267,7 @@
     gap: 32px;
   }
 }
+
 
 
 
