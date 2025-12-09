@@ -205,48 +205,54 @@
   }
 }
 
-/* ========= DESKTOP ≥1440px  ========= */
+/* ========= DESKTOP ≥1440px ========= */
 
 @media screen and (min-width: 1440px) {
   .footer {
-    padding: 80px 0 40px;
+    padding: 80px 0;                /* 80px зверху і знизу */
   }
 
   .footer__inner {
     max-width: 1440px;
     padding: 0 64px;
-    gap: 16px;
+    gap: 24px;                      /* між content і credits */
   }
 
+  /* CONTENT: logo left, nav center, socials right */
   .footer__content {
     flex-direction: row;
     align-items: center;
+    justify-content: space-between;
     text-align: left;
     gap: 32px;
   }
 
   .footer-logo {
     flex-shrink: 0;
-    margin-right: 64px;
   }
 
+  /* лого як у макеті на десктопі */
   .footer-logo__img {
     width: 164px;
     height: 70px;
   }
 
+  /* навігація по центру */
   .footer-nav {
     flex: 1;
+    display: flex;
+    justify-content: center;
   }
 
   .footer-nav__list {
     flex-direction: row;
-    justify-content: center;
-    gap: 32px;
+    flex-wrap: wrap;
+    gap: 32px;                      /* між пунктами меню */
   }
 
+  /* соцмережі праворуч */
   .footer-socials {
-    justify-content: اِflex-end;
+    justify-content: flex-end;
     gap: 24px;
   }
 
@@ -255,20 +261,36 @@
     height: 24px;
   }
 
+  /* ===== CREDITS ===== */
+
   .footer__credits {
+    padding-top: 24px;              /* від контенту до лінії */
+    display: flex;
+    flex-direction: column;
     align-items: center;
     text-align: center;
-    gap: 12px;
+    gap: 16px;                      /* між контактами та копірайтом */
+  }
+
+  .footer__divider {
+    width: 100%;
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.15);
   }
 
   .footer-contacts {
     flex-direction: row;
     justify-content: center;
-    gap: 32px;
+    gap: 32px;                      /* між телефоном та email */
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+  }
+
+  .footer-copy {
+    font-size: 14px;
+    margin: 0;
   }
 }
-
-
-
 
 
