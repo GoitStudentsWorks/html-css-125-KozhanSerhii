@@ -2,9 +2,8 @@
 
 .footer {
   width: 100%;
-  background-color: #75D281;   /* колір з макета */
-  padding: 48px 0;             /* mobile: 48 top/bottom */
-  /* color та font-size НЕ задаємо – вони з базових стилів */
+  background-color: #75D281;
+  padding: 32px 0 40px;
 }
 
 .footer__inner {
@@ -13,29 +12,32 @@
   padding: 0 20px;
   display: flex;
   flex-direction: column;
-  gap: 24px;                   /* відстань між content та credits */
+  gap: 32px;
 }
 
-/* ===== CONTENT (лого + меню + соцмережі) – mobile ===== */
+/* ===== CONTENT (logo + menu + socials) – mobile ===== */
 
 .footer__content {
   width: 100%;
-  padding: 16px;
+  padding: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  gap: 48px;                   /* тімлід просив 48px */
+  gap: 32px;
 }
 
-/* логотип — розмір з макета (можеш підкоригувати по Figma) */
+/* LOGO – mobile: frame 280 × 121, gap 24 */
 .footer-logo__img {
   display: block;
-  width: 148px;                /* постав точне значення з Figma */
+  width: 280px;
+  max-width: 100%;
   height: auto;
+  margin: 0 auto;
 }
 
-/* меню – стовпчиком */
+/* MENU */
+
 .footer-nav__list,
 .footer-socials {
   list-style: none;
@@ -46,13 +48,12 @@
 .footer-nav__list {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 16px;
 }
 
 .footer-nav__link {
   text-decoration: none;
   font-weight: 500;
-  /* колір беремо з базових стилів: */
   color: inherit;
 }
 
@@ -62,52 +63,52 @@
   opacity: 0.8;
 }
 
-/* соцмережі */
+/* SOCIALS */
 
 .footer-socials {
   display: flex;
   justify-content: center;
-  gap: 12px;
+  gap: 16px;
 }
 
 .footer-socials__link {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  color: inherit;              /* щоб іконки брали той самий колір */
+  color: inherit;
 }
 
 .footer-socials__icon {
-  width: 32px;                 /* підстав точні значення з Figma */
+  width: 32px;
   height: 32px;
-  fill: currentColor;          /* колір з батьківського color */
+  fill: currentColor;
 }
 
-/* ===== CREDITS (лінія + контакти + копірайт) – mobile ===== */
+/* ===== CREDITS (line + contacts + copyright) – mobile ===== */
 
 .footer__credits {
   width: 100%;
-  padding: 16px;
+  padding: 8px 0 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  gap: 42px;
+  gap: 12px;
 }
 
-/* лінія */
+/* line */
 .footer__divider {
   width: 100%;
   height: 1px;
   background-color: rgba(0, 0, 0, 0.15);
 }
 
-
 .footer-contacts {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 8px;
+  font-size: 14px;
 }
 
 .footer-contacts__link {
@@ -120,7 +121,6 @@
   opacity: 0.8;
 }
 
-/* копірайт – єдиний текст 14px за коментом тімліда */
 .footer-copy {
   font-size: 14px;
   margin: 0;
@@ -130,24 +130,29 @@
 
 @media screen and (min-width: 768px) {
   .footer {
-    padding: 64px 0;
+    padding: 56px 0 64px;
   }
 
   .footer__inner {
     max-width: 768px;
     padding: 0 32px;
-    gap: 20px;                 /* Figma: gap між блоками на tablet */
+    gap: 24px;
   }
 
   .footer__content {
-    padding: 16px;
+    padding: 0;
     flex-direction: column;
     align-items: center;
     text-align: center;
     gap: 24px;
   }
 
-  /* меню в ряд */
+  /* logo tablet: ~164 × 70 */
+  .footer-logo__img {
+    width: 164px;
+    height: 70px;
+  }
+
   .footer-nav__list {
     flex-direction: row;
     flex-wrap: wrap;
@@ -157,16 +162,18 @@
 
   .footer-socials {
     justify-content: center;
+    gap: 24px;
   }
 
+  /* tablet: іконки 40 × 40 */
   .footer-socials__icon {
     width: 40px;
     height: 40px;
   }
 
   .footer__credits {
-    padding: 16px;
-    gap: 16px;
+    padding-top: 8px;
+    gap: 12px;
   }
 
   .footer-contacts {
@@ -189,12 +196,17 @@
     gap: 32px;
   }
 
-  /* CONTENT: лого зліва, меню по центру, соцмережі справа */
+  /* CONTENT: logo left, menu center, socials right */
   .footer__content {
     flex-direction: row;
     align-items: center;
     text-align: left;
     gap: 32px;
+  }
+
+  .footer-logo {
+    flex-shrink: 0;
+    margin-right: auto;
   }
 
   .footer-nav {
@@ -208,16 +220,12 @@
   }
 
   .footer-socials {
+    margin-left: auto;
     justify-content: flex-end;
-  }
-  .footer-socials__icon {
-    width: 24px;
-    height: 24px;
+    gap: 24px;
   }
 
   .footer__credits {
-    padding: 0 0 16px;  
-    gap: 12px;   
     align-items: center;
     text-align: center;
   }
@@ -228,6 +236,73 @@
     gap: 40px;
   }
 }
+
+/* ========= DESKTOP ≥1440px (останній скрін) ========= */
+
+@media screen and (min-width: 1440px) {
+  .footer {
+    padding: 80px 0 40px;
+  }
+
+  .footer__inner {
+    max-width: 1440px;
+    padding: 0 64px;
+    gap: 16px;           
+  }
+
+  /* CONTENT: logo left, nav center, socials right */
+  .footer__content {
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+    gap: 32px;
+  }
+
+  .footer-logo {
+    flex-shrink: 0;
+    margin-right: 64px;   
+  }
+
+  /* desktop: ~164×70 з Figma */
+  .footer-logo__img {
+    width: 164px;
+    height: 70px;
+  }
+
+  .footer-nav {
+    flex: 1;              /* меню в центрі */
+  }
+
+  .footer-nav__list {
+    flex-direction: row;
+    justify-content: center;
+    gap: 32px;
+  }
+
+  .footer-socials {
+    justify-content: flex-end;
+    gap: 24px;
+  }
+
+  /* desktop: 24×24 */
+  .footer-socials__icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  .footer__credits {
+    align-items: center;
+    text-align: center;
+    gap: 12px;
+  }
+
+  .footer-contacts {
+    flex-direction: row;
+    justify-content: center;
+    gap: 32px;
+  }
+}
+
 
 
 
